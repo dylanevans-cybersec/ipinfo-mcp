@@ -1,5 +1,7 @@
 """
-A super simple MCP server for the IPinfo API — starting with IPinfo Lite.
+IPInfo - IP Geolocation and ASN lookup
+
+This is a super simple MCP server for the IPinfo API — starting with IPinfo Lite.
 
 IPinfo Lite is IPinfo's free, unlimited tier. It returns country + ASN
 level info for an IP (no city/region/lat-long — that's the Core/Plus tiers).
@@ -40,7 +42,7 @@ async def _get(path: str, params: dict[str, Any] | None = None) -> dict[str, Any
 
 @mcp.tool()
 async def get_ip_info(ip: str = "me") -> dict[str, Any]:
-    """Look up country and ASN info for an IP address using IPinfo Lite.
+    """Look up country and ASN info for an IP address using IPinfo.
 
     Args:
         ip: The IPv4 or IPv6 address to look up. Defaults to "me", which
